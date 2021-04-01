@@ -278,7 +278,7 @@ button:focus {
   align-items: center;
 }
 .title--decoration::after {
-  content: url("../love.svg");
+  content: url("../img/rate/love.svg");
   display: block;
   margin-left: 10px;
 }
@@ -364,7 +364,7 @@ button:focus {
 }
 .subtitle--decoration::after {
   margin-left: 10px;
-  content: url("../good.svg");
+  content: url("../img/rate/good.svg");
   display: block;
 }
 .subtitle--overline {
@@ -467,6 +467,10 @@ button:focus {
   text-transform: uppercase;
   font-weight: 500;
 }
+.button:hover {
+  background-color: #A66230;
+  transition: 0.2s linear;
+}
 .button svg {
   display: block;
   width: 27px;
@@ -482,6 +486,10 @@ button:focus {
 .button--brown {
   background-color: #A66230;
 }
+.button--brown:hover {
+  background-color: #231F20;
+  transition: 0.2s linear;
+}
 .button--long {
   width: auto;
 }
@@ -494,6 +502,10 @@ button:focus {
 .button--yellow {
   background: #FFC193;
   color: #231F20;
+}
+.button--yellow:hover {
+  background-color: #FF939C;
+  transition: 0.2s linear;
 }
 .button--buy {
   margin: 0 auto;
@@ -519,25 +531,23 @@ button:focus {
 .list__item:last-of-type {
   margin-bottom: 0;
 }
-.list__item--circle::before {
+.list__item--circle__brown::before, .list__item--circle__dark::before, .list__item--circle__green::before, .list__item--circle__yellow::before {
   content: "";
   display: flex;
   width: 8px;
   height: 8px;
   border-radius: 100%;
-  background: #A66230;
   flex: 0 0 auto;
   margin-right: 11px;
 }
+.list__item--circle__brown::before {
+  background-color: #A66230;
+}
 .list__item--circle__dark::before {
-  content: "";
-  display: flex;
-  width: 8px;
-  height: 8px;
-  border-radius: 100%;
-  background: #231F20;
-  flex: 0 0 auto;
-  margin-right: 11px;
+  background-color: #231F20;
+}
+.list__item--circle__yellow::before {
+  background-color: #FFC193;
 }
 .list__item--check::before {
   content: url("../img/bonus/check.svg");
@@ -1599,7 +1609,7 @@ button:focus {
     padding: 0 30px;
   }
 
-  .list__item--circle::before {
+  .list__item--circle__green::before {
     background-color: #AAA46C;
   }
 }
@@ -1729,12 +1739,6 @@ button:focus {
 
   .list__bonus {
     margin-top: 20px;
-  }
-  .list__sessions {
-    padding: 20px 35px 40px 35px;
-  }
-  .list__sessions .list__item--check::before {
-    display: none;
   }
 
   .button {
