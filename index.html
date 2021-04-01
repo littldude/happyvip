@@ -523,7 +523,7 @@
                             <p class="subtitle subtitle--overline subtitle--buy"> 20 000 р.</p>
                             <p class="title title--brown title--price">7 000 р.</p>
                             <div class="buy__inner--currency">
-                                <p class="text text--medium text--currency" id="UAH3"></p><p class="text text--medium text--currency" id="EUR3"></p><p class="text text--medium text--currency" id="USD3"></p>
+                                <p class="text text--medium text--currency" id="UAH1"></p><p class="text text--medium text--currency" id="EUR1"></p><p class="text text--medium text--currency" id="USD1"></p>
                             </div>
                             <a class="button button--buy button--brown" href="https://kurs-kurkin.ru/site_1step" target="_blank">Купить</a>
                         </div>
@@ -543,7 +543,7 @@
                             <p class="subtitle subtitle--overline  subtitle--buy text--white"> 30 000 р.</p>
                             <p class="title title--price">12 000 р.</p>
                             <div class="buy__inner--currency">
-                                <p class="text text--medium text--currency text--white" id="UAH3"></p><p class="text text--medium text--currency text--white" id="EUR3"></p><p class="text text--medium text--currency text--white" id="USD3"></p>
+                                <p class="text text--medium text--currency text--white" id="UAH2"></p><p class="text text--medium text--currency text--white" id="EUR2"></p><p class="text text--medium text--currency text--white" id="USD2"></p>
                             </div>
                             <a class="button button--buy" href="https://kurs-kurkin.ru/site_1stepdop" target="_blank">Купить</a>
                         </div>
@@ -648,27 +648,19 @@
     })
 </script>
 <script>
-    $.getJSON("https://vadimkurkin.com/prices.json", function(data) {
-       $('#price1').html(data['vtss']['step1'] + ' ' + 'р.');
-       $('#price2').html(data['vtss']['step2'] + ' ' + 'р.');
-       $('#price3').html(data['vtss']['step3'] + ' ' + 'р.')
-           .then($.getJSON("https://www.cbr-xml-daily.ru/daily_json.js", function(data) {
-               $price1 = parseFloat($('#price1').text());
-               $price2 = parseFloat($('#price2').text());
-               $price3 = parseFloat($('#price3').text());
-               $('#USD1').html(($price1 / data.Valute.USD.Value).toFixed() + '$');
-               $('#EUR1').html(($price1 / data.Valute.EUR.Value).toFixed() + '€');
-               $('#UAH1').html(($price1 / (data.Valute.UAH.Value / data.Valute.UAH.Nominal)).toFixed() + '₴');
-               
-               $('#USD2').html(($price2 / data.Valute.USD.Value).toFixed() + '$');
-               $('#EUR2').html(($price2 / data.Valute.EUR.Value).toFixed() + '€');
-               $('#UAH2').html(($price2 / (data.Valute.UAH.Value / data.Valute.UAH.Nominal)).toFixed() + '₴');
+$.getJSON("https://www.cbr-xml-daily.ru/daily_json.js", function(data) {
+    $('#USD1').html((7000 / data.Valute.USD.Value).toFixed() + '$');
+    $('#EUR1').html((7000 / data.Valute.EUR.Value).toFixed() + '€');
+    $('#UAH1').html((7000 / (data.Valute.UAH.Value / data.Valute.UAH.Nominal)).toFixed() + '₴');
+    
+    $('#USD2').html((12000 / data.Valute.USD.Value).toFixed() + '$');
+    $('#EUR2').html((12000 / data.Valute.EUR.Value).toFixed() + '€');
+    $('#UAH2').html((12000 / (data.Valute.UAH.Value / data.Valute.UAH.Nominal)).toFixed() + '₴');
 
-               $('#USD3').html(($price3 / data.Valute.USD.Value).toFixed() + '$');
-               $('#EUR3').html(($price3 / data.Valute.EUR.Value).toFixed() + '€');
-               $('#UAH3').html(($price3 / (data.Valute.UAH.Value / data.Valute.UAH.Nominal)).toFixed() + '₴');
-       }))
-   });
+    $('#USD3').html((150000 / data.Valute.USD.Value).toFixed() + '$');
+    $('#EUR3').html((150000 / data.Valute.EUR.Value).toFixed() + '€');
+    $('#UAH3').html((150000 / (data.Valute.UAH.Value / data.Valute.UAH.Nominal)).toFixed() + '₴');
+});
 </script>
 <script>
     $(document).ready(function() {
