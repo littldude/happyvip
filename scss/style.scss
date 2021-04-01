@@ -309,9 +309,15 @@ button:focus {
         color: #A66230;
     }
     &--decoration {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         &::after {
             content: url('../img/rate/love.svg');
             display: block;
@@ -357,11 +363,6 @@ button:focus {
     &--white {
         color: #ffffff;
     }
-    &--sessions {
-        margin-top: 34px;
-        display: block;
-        width: 585px;
-    }
     &--autor {
         margin-bottom: 20px;
         margin-left: 40px;
@@ -369,12 +370,6 @@ button:focus {
     &--buy {
         text-align: center;
         margin-top: 35px;
-    }
-    &--long {
-        width: 162px;
-    }
-    &--loong {
-        width: 155px;
     }
     &--underline {
         &::after {
@@ -396,9 +391,15 @@ button:focus {
         font-weight: 500;
     }
     &--decoration {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         &::after {
             margin-left: 10px;
             content: url('../img/rate/good.svg');
@@ -406,7 +407,8 @@ button:focus {
         }
     }
     &--overline {
-        text-decoration-line: line-through;
+        -webkit-text-decoration-line: line-through;
+                text-decoration-line: line-through;
     }
 }
 .text {
@@ -513,6 +515,8 @@ button:focus {
     font-weight: 500;
     &:hover {
         background-color: #A66230;
+        -webkit-transition: .2s linear;
+        -o-transition: .2s linear;
         transition: .2s linear;
     }
     svg {
@@ -531,6 +535,8 @@ button:focus {
         background-color: #A66230;
         &:hover {
             background-color: #231F20;
+            -webkit-transition: .2s linear;
+            -o-transition: .2s linear;
             transition: .2s linear;
         }
     }
@@ -548,6 +554,8 @@ button:focus {
         color: $dark;
         &:hover {
             background-color: #FF939C;
+            -webkit-transition: .2s linear;
+            -o-transition: .2s linear;
             transition: .2s linear;
         }
     }
@@ -656,12 +664,6 @@ button:focus {
             background-color: #A66230;
         }
     }
-    &__sessions {
-        padding: 35px 100px 36px 60px;
-    }
-    &__short {
-        height: auto;
-    }
     &__rate {
         margin-top: 30px;
     }
@@ -703,16 +705,27 @@ button:focus {
     }
     &__item {
         margin-bottom: 20px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: row;
-        align-items: center;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         width: 425px;
         &:last-child {
             margin-bottom: 0;
         }
         &--img {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex: 0 0 auto;
+            -webkit-box-flex: 0;
+                -ms-flex: 0 0 auto;
+                    flex: 0 0 auto;
             margin-right: 12px;
             width: 25px;
             height: 25px;
@@ -728,35 +741,6 @@ button:focus {
     position: relative;
     background-color: #BF9C83;
     padding: 75px 0;
-    &__inner {
-        position: relative;
-        margin-top: 80px;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-                justify-content: space-between;
-        z-index: 1;
-        &--item {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-                -ms-flex-direction: column;
-                    flex-direction: column;
-            -webkit-box-align: center;
-                -ms-flex-align: center;
-                    align-items: center;
-            width: 378px;
-            padding: 40px 30px;
-            background: #FFFFFF;
-            -webkit-box-shadow: 0px 7px 10px #A98267;
-                    box-shadow: 0px 7px 10px #A98267;
-            border-radius: 25px;
-        }
-    }
 }
 .program {
     padding: 160px 0 60px 0;
@@ -1068,35 +1052,6 @@ button:focus {
                 justify-content: center;
     }
 }
-.sessions {
-    padding: 100px 0;
-    &__inner {
-        position: relative;
-        margin-top: 67px;
-        &--item {
-            margin-bottom: 30px;
-            width: 888px;
-            background-color: #ffffff;
-            border-radius: 25px;
-            overflow: hidden;
-            -webkit-box-shadow: 0px 5px 10px rgba(169, 130, 103, 0.3);
-                    box-shadow: 0px 5px 10px rgba(169, 130, 103, 0.3);
-            &:last-of-type {
-                margin-bottom: 0;
-            }
-        }
-    }
-    &__header {
-        padding: 18px 0 21px 60px;
-        background-color: #FFC193;
-    }
-    &__img {
-        display: block;
-        position: absolute;
-        top: 171px;
-        right: 0;
-    }
-}
 .autor {
     padding: 110px 0 95px 0;
     &__inner {
@@ -1137,15 +1092,23 @@ button:focus {
     background-color: #FFDDC4;
     &__inner {
         margin-top: 70px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         &--item {
             margin-bottom: 50px;
             padding: 70px 95px 80px 68px;
             width: 990px;
             background: #FFFFFF;
-            box-shadow: 0px 5px 10px rgba(169, 130, 103, 0.3);
+            -webkit-box-shadow: 0px 5px 10px rgba(169, 130, 103, 0.3);
+                    box-shadow: 0px 5px 10px rgba(169, 130, 103, 0.3);
             border-radius: 25px;
             &:last-of-type {
                 margin-bottom: 0;
@@ -1168,7 +1131,10 @@ button:focus {
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
-            flex-direction: column;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
             width: 32.5%;
             padding: 38px 45px 56px 45px;
             border-radius: 25px;
@@ -1330,17 +1296,6 @@ button:focus {
     .container {
         padding: 0 1%;
     }
-    .about {
-        &__inner {
-            &--item {
-                -webkit-box-align: center;
-                    -ms-flex-align: center;
-                        align-items: center;
-                width: 32.5%;
-                padding: 33px 30px 44px 40px;
-            }
-        }
-    }
     .bonus {
         &__img {
             width: 450px;
@@ -1350,16 +1305,6 @@ button:focus {
     .list {
         &__results {
             width: 500px;
-        }
-    }
-    .sessions {
-        &__inner {
-            &--item {
-                width: 76%;
-            }
-        }
-        &__img {
-            width: 35%;
         }
     }
     .buy {
@@ -1482,18 +1427,6 @@ button:focus {
             width: 592px;
         }
     }
-    .about {
-        &__block {
-            top: -5%;
-        }
-        &__inner {
-            margin-top: 50px;
-            &--item {
-                width: 33%;
-                padding: 33px 20px 44px 20px;
-            }
-        }
-    }
     .bonus {
         &__img {
             width: 35%;
@@ -1560,9 +1493,6 @@ button:focus {
         &--yellow {
             display: none;
         }
-    }
-    .about {
-        overflow: hidden;
     }
 }
 @media (max-width: 877px) {
@@ -1664,10 +1594,6 @@ button:focus {
                 opacity: .6;
             }
         }
-        &--sessions {
-            width: auto;
-            text-align: center;
-        }
         &--buy {
             font-size: 20px;
         }
@@ -1708,54 +1634,6 @@ button:focus {
         }
         &--left {
             text-align: left;
-        }
-    }
-    .about {
-        padding: 60px 0;
-        &__block {
-            display: none;
-            &--m {
-                margin-top: 40px;
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                -webkit-box-orient: vertical;
-                -webkit-box-direction: normal;
-                    -ms-flex-direction: column;
-                        flex-direction: column;
-                -webkit-box-pack: center;
-                    -ms-flex-pack: center;
-                        justify-content: center;
-                -webkit-box-align: center;
-                    -ms-flex-align: center;
-                        align-items: center;
-            }
-            &--item {
-                width: 60%;
-                margin: 30px 0;
-                &:first-of-type {
-                    margin: 0;
-                }
-                &:last-of-type {
-                    margin: 0;
-                }
-            }
-        }
-        &__inner {
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-                -ms-flex-direction: column;
-                    flex-direction: column;
-            -webkit-box-align: center;
-                -ms-flex-align: center;
-                    align-items: center;
-            &--item {
-                width: 60%;
-                margin-bottom: 30px;
-                &:last-child {
-                    margin-bottom: 0;
-                }
-            }
         }
     }
     .bonus {
@@ -1912,31 +1790,6 @@ button:focus {
     .svg {
         display: block;
     }
-    .sessions {
-        &__inner {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-                -ms-flex-direction: column;
-                    flex-direction: column;
-            -webkit-box-align: center;
-                -ms-flex-align: center;
-                    align-items: center;
-            &--item {
-                width: 80%;
-            }
-        }
-        &__img {
-            width: 50%;
-            margin-top: 30px;
-            position: static;
-        }
-        &__header {
-            padding: 18px 8px 21px 60px;;
-        }
-    }
     .autor {
         padding: 70px 0;
         &__inner {
@@ -2090,12 +1943,6 @@ button:focus {
         &--bonus {
             padding: 0;
         }
-        &--long {
-            width: 203px;
-        }
-        &--loong {
-            width: 193px;
-        }
         &--underline {
             position: relative;
             &::after {
@@ -2133,7 +1980,6 @@ button:focus {
         &--buy {
             font-size: 21px;
         }
-
         &--overline {
             &::before {
                 width: 110px;
